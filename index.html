@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Tema 09</title>
+	<meta charset="utf-8">
+	<link href="css/estilos_2.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="principal">
+		<header>
+			<h1 id="h1cab">La Gastronomía en el Perú</h1>
+			<img id="imgcab" src="imagenes/ban1.jpg" />
+		</header>
+		<nav>
+			<div id="pf">Fecha: ?</div>
+			<div id="ph">Hora: ?</div>
+		</nav>
+		<section>
+			<div class="blok"><img class="imgblok" src="imagenes/gastronomia1.jpg" /></div>
+			<div class="blok"><img class="imgblok" src="imagenes/gastronomia2.jpg" /></div>
+			<div class="blok"><img class="imgblok" src="imagenes/gastronomia3.jpg" /></div>
+			<div class="blok"><img class="imgblok" src="imagenes/gastronomia4.jpg" /></div>
+		</section>
+	</div>
+	<script>
+		var c = 1;
+		function carrusel(){
+			document.getElementById('imgcab').
+			setAttribute('src','imagenes/ban'+c+'.jpg');
+			c++;
+			if (c > 5)
+				c = 1;
+			setTimeout('carrusel()',1000);
+		}
+		carrusel();
+	</script>
+	<script src="js/codigos.js"></script>
+</body>
+
+</html>
